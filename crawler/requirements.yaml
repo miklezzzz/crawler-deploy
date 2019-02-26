@@ -1,0 +1,14 @@
+---
+dependencies:
+  - name: search-engine-ui
+    version: "1.0.0"
+    repository: "file://../search-engine-ui"
+  - name: search-engine-crawler
+    version: "1.0.0"
+    repository: "file://../search-engine-crawler"
+  - name: rabbitmq
+    version: "4.2.0"
+    repository: "file://../rabbitmq"
+  - name: mongodb
+    version: "0.4.18"
+    repository: "file://../mongodb"

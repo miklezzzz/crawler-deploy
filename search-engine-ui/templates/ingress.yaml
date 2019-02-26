@@ -1,0 +1,25 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ template "crawler-ui.fullname" . }}
+  annotations: 
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    kubernetes.io/ingress.class: {{ .Values.ingress.class }}
+spec:
+  rules:
+  - host: {{ .Values.ingress.host | default .Release.Name }}.z-project.tk
+    http:
+      paths:
+      - path: "/"
+        backend:
+          serviceName: {{ template "crawler-ui.fullname" . }}
+          servicePort: {{ .Values.service.internalPort }}
+  {{ if eq .Release.Namespace "production" }}
+  - http:
+      paths:
+      - path: "/"
+        backend:
+          serviceName: {{ template "crawler-ui.fullname" . }}
+          servicePort: {{ .Values.service.internalPort }}
+  {{ end }}

@@ -1,0 +1,15 @@
+dependencies:
+- name: search-engine-ui
+  repository: file://../search-engine-ui
+  version: 1.0.0
+- name: search-engine-crawler
+  repository: file://../search-engine-crawler
+  version: 1.0.0
+- name: rabbitmq
+  repository: file://../rabbitmq
+  version: 4.2.0
+- name: mongodb
+  repository: file://../mongodb
+  version: 0.4.18
+digest: sha256:8b7fffd0de34b73733392b224d6c069e6e66ed1cfa9d1a888a4675761e62b3bb
+generated: 2019-02-26T18:25:24.727388083+05:00

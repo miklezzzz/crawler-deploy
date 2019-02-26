@@ -1,0 +1,14 @@
+search-engine-crawler:
+  image:
+    repository: miklezzzz
+    tag: master
+  service:
+    externalPort: 9292
+
+search-engine-ui:
+  image:
+    repository: miklezzzz
+    tag: master
+  service:
+    externalPort: 5000
+

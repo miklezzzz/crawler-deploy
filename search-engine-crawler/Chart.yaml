@@ -1,0 +1,8 @@
+---
+name: search-engine-crawler
+version: 1.0.0
+description: OTUS crawler search engine
+maintainers:
+  - name: Mikhail Scherba
+    email: my@mail.com
+appVersion: 1.0

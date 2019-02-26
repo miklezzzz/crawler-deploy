@@ -1,0 +1,15 @@
+---
+service:
+  internalPort: 8000
+
+image:
+  repository: miklezzzz
+  tag: master
+
+ingress:
+  class: nginx
+  host:
+
+mongoPORT:
+mongoHOST:
+

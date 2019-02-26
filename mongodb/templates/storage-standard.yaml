@@ -1,0 +1,7 @@
+{{ if eq .Release.Namespace "production" }}
+apiVersion: storage.k8s.io/v1beta1
+kind: StorageClass
+metadata:
+  name: standard
+provisioner: kubernetes.io/no-provisioner
+{{ end }}
