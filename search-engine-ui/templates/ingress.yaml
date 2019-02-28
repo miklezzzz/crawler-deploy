@@ -15,11 +15,3 @@ spec:
         backend:
           serviceName: {{ template "crawler-ui.fullname" . }}
           servicePort: {{ .Values.service.internalPort }}
-  {{ if eq .Release.Namespace "production" }}
-  - http:
-      paths:
-      - path: "/"
-        backend:
-          serviceName: {{ template "crawler-ui.fullname" . }}
-          servicePort: {{ .Values.service.internalPort }}
-  {{ end }}
